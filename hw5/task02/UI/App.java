@@ -9,7 +9,7 @@ import hw5.task02.Core.MVP.View;
 
 public class App {
     public static void ButtonClick() {
-        System.out.print("\033[H\033[J");// ru.stackoverflow.com/questions/1315049/Как-очистить-консоль-в-java-во-время-действия-программы
+        System.out.print("\033[H\033[J");
         View view = new ConsoleView();
         Presenter presenter = new Presenter(view, Config.path);
         presenter.LoadFromFile();
