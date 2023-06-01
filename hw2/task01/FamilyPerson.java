@@ -1,6 +1,6 @@
 package hw2.task01;
 
-public abstract class FamilyPerson {
+public class FamilyPerson implements Status{
     protected String surname;
     protected String name;
     protected String gender;
@@ -14,20 +14,8 @@ public abstract class FamilyPerson {
         this.surname = surname;
     }
 
-
-    public String getInfo() {
-        return String.format("surname: %s, name: %s, gender: %s, age: %d",this.surname, this.name, this.gender, this.age);
-
+    @Override
+    public String SetPersonStatus() {
+        return null;
     }
-
-    public String isRelative(FamilyPerson p){
-        String s = p.surname;
-        if (s.equals(this.surname)){
-            return String.format("Person: %s %s is relative Person: %s %s",
-                    p.surname, p.name, this.surname, this.name);
-        }
-            return String.format("Person: %s %s is not relative Person: %s %s",
-                    p.surname, p.name, this.surname, this.name);
-        }
-    public abstract String GetPersonStatus();
 }

@@ -1,6 +1,6 @@
 package hw2.task01;
 
-public class GrParents extends FamilyPerson {
+public class GrParents extends FamilyPerson implements Status{
 
     protected String status;
 
@@ -8,18 +8,8 @@ public class GrParents extends FamilyPerson {
         super(surname, name, gender, age);
     }
 
-    public String getInfo() {
-        String g = super.gender;
-        g = g.toLowerCase();
-        if (g.equals("female")){
-            this.status = "Grand Mother";
-            return String.format("Info:%s  Status: %s",super.getInfo(), this.status);
-        }
-        this.status = "Grand Father";
-        return String.format("Info:%s  Status: %s",super.getInfo(), this.status);
-    }
-
-    public String GetPersonStatus(){
+    @Override
+    public String SetPersonStatus() {
         String g = super.gender;
         g = g.toLowerCase();
         if (g.equals("female")){
