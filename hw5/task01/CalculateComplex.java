@@ -3,7 +3,8 @@ package hw5.task01;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class CalculateComplex extends ComplexNumbers implements Calc<ComplexNumbers>{
+public class CalculateComplex extends ComplexNumbers implements CalcDiff<ComplexNumbers>, CalcTimes<ComplexNumbers>,
+        CalcSum<ComplexNumbers>, CalcDivi<ComplexNumbers>{
     public CalculateComplex(ValuesNumber c) {
         super(c.num1, c.num2);
     }

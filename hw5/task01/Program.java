@@ -2,9 +2,10 @@ package hw5.task01;
 
 public class Program {
     public static void main(String[] args) {
-        V run = new V();
+        View run = new View();
+
         run.calcComplex();
         run.calcRetional();
-        run.calcComplex();
+        run.closeScanner();
     }
 }

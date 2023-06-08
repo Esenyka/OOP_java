@@ -4,24 +4,24 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class V {
-    Scanner in = new Scanner(System.in);
+public class View {
+    Scanner scanner = new Scanner(System.in);
     public void calcComplex() {
         try (FileWriter writer = new FileWriter("notes3.txt", false)) {
             writer.write("LAST OPERATION\n");
             System.out.println("Calculate Complex");
             System.out.print("Input a number 1: ");
-            double num1 = in.nextDouble();
+            double num1 = scanner.nextDouble();
             writer.write("num1 = " + num1 + "\n");
             System.out.print("Input a number 2: ");
-            double num2 = in.nextDouble();
+            double num2 = scanner.nextDouble();
             writer.write("num2 = " + num2 + "\n");
             CalculateComplex c = new CalculateComplex(new ComplexNumbers(num1, num2));
             System.out.print("Input a m. number 1: ");
-            double mNum1 = in.nextDouble();
+            double mNum1 = scanner.nextDouble();
             writer.write("Input a m. number 1:" + mNum1 + "\n");
             System.out.print("Input a m. number 2: ");
-            double mNum2 = in.nextDouble();
+            double mNum2 = scanner.nextDouble();
             writer.write("Input a m. number 2:" + mNum2 + "\n");
             c.setmNum1(mNum1);
             c.setmNum2(mNum2);
@@ -46,10 +46,10 @@ public class V {
             writer.write("LAST OPERATION\n");
             System.out.println("Calculate Relation");
             System.out.print("Input a number 1: ");
-            double n1 = in.nextDouble();
+            double n1 = scanner.nextDouble();
             writer.write("num1 = " + n1 + "\n");
             System.out.print("Input a number 2: ");
-            double n2 = in.nextDouble();
+            double n2 = scanner.nextDouble();
             writer.write("num1 = " + n2 + "\n");
             CalculateRational r = new CalculateRational(n1, n2);
             System.out.println("sum = " + r.sum());
@@ -64,6 +64,9 @@ public class V {
         catch(IOException ex){
             System.out.println(ex.getMessage());
         }
+    }
+    public void closeScanner() {
+        scanner.close();
     }
 
 
